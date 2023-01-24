@@ -24,9 +24,9 @@
           </v-list-item-avatar>
           <v-list-item-content>
             <v-list-item-title class="text-h6">
-              NgaziTech Platform
+              KaziKazi Platform
             </v-list-item-title>
-            <v-list-item-subtitle>Transactions management</v-list-item-subtitle>
+            <v-list-item-subtitle>Adminstration management</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -271,49 +271,41 @@ export default {
           icon: 'view-dashboard',
           to: '/'
         },
+        // {
+        //   title: 'Organizations',
+        //   icon: 'account-group',
+        //   to: '/groups'
+        // },
+        // {
+        //   title: 'Banks',
+        //   icon: 'bank',
+        //   to: '/banks'
+        // },
         {
-          title: 'Organizations',
+          title: 'Clients',
           icon: 'account-group',
-          to: '/groups'
+          to: '/users'
         },
-      //   {
-      //     title: 'Banks',
-      //     icon: 'bank',
-      //     to: '/banks'
-      //   },
-      //  {
-      //     title: 'DCU',
-      //     icon: 'access-point'
-      //   },
-      //   {
-      //     title: 'QES',
-      //     icon: 'dots-circle'
-      //   },
-      //   {
-      //     title: 'Line Loss Rule',
-      //     icon: 'source-branch'
-      //   },
-      //   {
-      //     title: 'VEE Work Group',
-      //     icon: 'widgets'
-      //   },
-      //   {
-      //     title: 'Install Survey',
-      //     icon: 'magnify'
-      //   },
-      //   {
-      //     title: 'Install Plan',
-      //     icon: 'crosshairs'
-      //   },
-      //   {
-      //     title: 'Install Order',
-      //     icon: 'stack-overflow'
-      //   },
-      //   {
-      //     title: 'Help Desk',
-      //     icon: 'information'
-      //   }
-   
+        {
+          title: 'Jobs',
+          icon: 'file',
+          to: '/jobs'
+        },
+        {
+          title: 'Regions',
+          icon: 'domain',
+          to: '/regions'
+        },
+        { 
+          title: 'Feedbacks',
+          icon: 'bank',
+          to: '/feedback'
+        },
+        { 
+          title: 'Settings',
+          icon: 'cog',
+          to: '/settings'
+        },
       ],
       miniVariant: false,
       right: true,
