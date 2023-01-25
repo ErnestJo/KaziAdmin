@@ -9,7 +9,7 @@
       dark
       app
       height="100%"
-      style="max-height: 97.6%;"
+      style="max-height: 100%;"
     >
       <v-list>
         <v-list-item v-if="miniVariant" class="px-2">
@@ -151,7 +151,7 @@
       :absolute="!fixed"
       app
     >
-      <footer-component />
+      <!-- <footer-component /> -->
     </v-footer>
   </v-app>
 </template>
