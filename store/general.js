@@ -285,7 +285,7 @@ const actions = {
   async _fetchcreated ({ commit }) {
     commit('GET_CREATED')
     await this.$axios
-      .$get('/api/category')
+      .$get('/api/created')
       .then((response) => {
         commit('GET_CREATED_SUCCESS', response)
       })
