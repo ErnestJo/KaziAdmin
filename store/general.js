@@ -53,9 +53,22 @@ const mutations = {
    },
    'GET_LOCATION_SUCCESS' (state, payload) {
      state.showLoader = false
-     state.days = payload.days == null ? [] : payload.days
+     state.location = payload.location == null ? [] : payload.location
    },
 
+   'GET_JOBNAME'(state) {
+    state.showLoader = true
+   },
+   'GET_JOBNAME_FAILED'(){
+     state.showLoader = false
+   },
+   'GET_JOBNAME_ERROR' (state) {
+     state.showLoader = false
+   },
+   'GET_JOBNAME_SUCCESS' (state, payload) {
+     state.showLoader = false
+     state.jobName = payload.jobName == null ? [] : payload.jobName
+   },
 }
 
 const actions = {
