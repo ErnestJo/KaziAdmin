@@ -249,7 +249,7 @@ const actions = {
   async _fetchphone ({ commit }) {
     commit('GET_PHONE')
     await this.$axios
-      .$get('/api/category')
+      .$get('/api/phone')
       .then((response) => {
         commit('GET_PHONE_SUCCESS', response)
       })
