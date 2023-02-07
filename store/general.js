@@ -273,7 +273,7 @@ const actions = {
   async _fetchslots ({ commit }) {
     commit('GET_SLOTS')
     await this.$axios
-      .$get('/api/category')
+      .$get('/api/slots')
       .then((response) => {
         commit('GET_SLOTS_SUCCESS', response)
       })
