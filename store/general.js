@@ -357,14 +357,14 @@ const actions = {
   async _fetchchannel ({ commit }) {
     commit('GET_CHANNEL')
     await this.$axios
-      .$get('/api/category')
+      .$get('/api/owner.channel.name')
       .then((response) => {
         commit('GET_CHANNEL_SUCCESS', response)
       })
       .catch(() => {
         commit('GET_CHANNEL_ERROR')
       })
-  },
+    },
 
 }
 
