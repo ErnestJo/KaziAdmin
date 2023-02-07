@@ -297,7 +297,7 @@ const actions = {
   async _fetchremoved ({ commit }) {
     commit('GET_REMOVED')
     await this.$axios
-      .$get('/api/category')
+      .$get('/api/removed')
       .then((response) => {
         commit('GET_REMOVED_SUCCESS', response)
       })
