@@ -69,6 +69,62 @@ const mutations = {
      state.showLoader = false
      state.jobName = payload.jobName == null ? [] : payload.jobName
    },
+
+   'GET_PHONE'(state) {
+    state.showLoader = true
+   },
+   'GET_PHONE_FAILED'(){
+     state.showLoader = false
+   },
+   'GET_PHONE_ERROR' (state) {
+     state.showLoader = false
+   },
+   'GET_PHONE_SUCCESS' (state, payload) {
+     state.showLoader = false
+     state.phone = payload.phone == null ? [] : payload.phone
+   },
+
+   'GET_REGION'(state) {
+    state.showLoader = true
+   },
+   'GET_REGION_FAILED'(){
+     state.showLoader = false
+   },
+   'GET_REGION_ERROR' (state) {
+     state.showLoader = false
+   },
+   'GET_REGION_SUCCESS' (state, payload) {
+     state.showLoader = false
+     state.region = payload.region == null ? [] : payload.region
+   },
+
+   'GET_SLOTS'(state) {
+    state.showLoader = true
+   },
+   'GET_SLOTS_FAILED'(){
+     state.showLoader = false
+   },
+   'GET_SLOTS_ERROR' (state) {
+     state.showLoader = false
+   },
+   'GET_SLOTS_SUCCESS' (state, payload) {
+     state.showLoader = false
+     state.slots = payload.slots == null ? [] : payload.slots
+   },
+
+   'GET_REMOVED'(state) {
+    state.showLoader = true
+   },
+   'GET_REMOVED_FAILED'(){
+     state.showLoader = false
+   },
+   'GET_REMOVED_ERROR' (state) {
+     state.showLoader = false
+   },
+   'GET_REMOVED_SUCCESS' (state, payload) {
+     state.showLoader = false
+     state.removed = payload.removed == null ? [] : payload.removed
+   },
 }
 
 const actions = {
