@@ -345,7 +345,7 @@ const actions = {
   async _fetchname ({ commit }) {
     commit('GET_NAME')
     await this.$axios
-      .$get('/api/category')
+      .$get('/api/owner.name')
       .then((response) => {
         commit('GET_NAME_SUCCESS', response)
       })
