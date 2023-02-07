@@ -213,7 +213,7 @@ const actions = {
   async _fetchdays ({ commit }) {
     commit('GET_DAYS')
     await this.$axios
-      .$get('/api/category')
+      .$get('/api/days')
       .then((response) => {
         commit('GET_DAYS_SUCCESS', response)
       })
@@ -225,7 +225,7 @@ const actions = {
   async _fetchlocation ({ commit }) {
     commit('GET_LOCATION')
     await this.$axios
-      .$get('/api/category')
+      .$get('/api/location')
       .then((response) => {
         commit('GET_LOCATION_SUCCESS', response)
       })
@@ -237,7 +237,7 @@ const actions = {
   async _fetchjobname ({ commit }) {
     commit('GET_JOBNAME')
     await this.$axios
-      .$get('/api/category')
+      .$get('/api/name')
       .then((response) => {
         commit('GET_JOBNAME_SUCCESS', response)
       })
