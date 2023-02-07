@@ -1,5 +1,16 @@
 const state = () => ({
-  general: null
+  category: null,
+  days: null,
+  location:  null,
+  jobName: null,
+  phone: null,
+  region: null,
+  slots: null,
+  removed: null,
+  updatedAt: null,
+  uudi: null,
+  channel: null,
+  name: null,
 })
 
 const mutations = {
@@ -14,8 +25,37 @@ const mutations = {
   },
   'GET_CATEGORY_SUCCESS' (state, payload) {
     state.showLoader = false
-    state.general = payload.banks == null ? [] : payload.general
-  }
+    state.category = payload.category == null ? [] : payload.category
+  },
+
+  'GET_DAYS'(state) {
+   state.showLoader = true
+  },
+  'GET_DAYS_FAILED'(){
+    state.showLoader = false
+  },
+  'GET_DAYS_ERROR' (state) {
+    state.showLoader = false
+  },
+  'GET_DAYS_SUCCESS' (state, payload) {
+    state.showLoader = false
+    state.days = payload.days == null ? [] : payload.days
+  },
+
+  'GET_LOCATION'(state) {
+    state.showLoader = true
+   },
+   'GET_LOCATION_FAILED'(){
+     state.showLoader = false
+   },
+   'GET_LOCATION_ERROR' (state) {
+     state.showLoader = false
+   },
+   'GET_LOCATION_SUCCESS' (state, payload) {
+     state.showLoader = false
+     state.days = payload.days == null ? [] : payload.days
+   },
+
 }
 
 const actions = {
@@ -33,8 +73,8 @@ const actions = {
 }
 
 const getters = {
-  general: (state) => {
-    return state.general
+  category: (state) => {
+    return state.category
   }
 }
 
