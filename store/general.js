@@ -261,7 +261,7 @@ const actions = {
   async _fetchregion ({ commit }) {
     commit('GET_REGION')
     await this.$axios
-      .$get('/api/category')
+      .$get('/api/region')
       .then((response) => {
         commit('GET_REGION_SUCCESS', response)
       })
