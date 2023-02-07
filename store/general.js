@@ -333,7 +333,7 @@ const actions = {
   async _fetchuudi ({ commit }) {
     commit('GET_UUDI')
     await this.$axios
-      .$get('/api/category')
+      .$get('/api/owner.uuid')
       .then((response) => {
         commit('GET_UUDI_SUCCESS', response)
       })
