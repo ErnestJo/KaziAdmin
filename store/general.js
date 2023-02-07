@@ -181,6 +181,20 @@ const mutations = {
      state.showLoader = false
      state.name = payload.name == null ? [] : payload.name
    },
+
+   'GET_CHANNEL'(state) {
+    state.showLoader = true
+   },
+   'GET_CHANNEL_FAILED'(){
+     state.showLoader = false
+   },
+   'GET_CHANNEL_ERROR' (state) {
+     state.showLoader = false
+   },
+   'GET_CHANNEL_SUCCESS' (state, payload) {
+     state.showLoader = false
+     state.channel = payload.channel == null ? [] : payload.channel
+   },
 }
 
 const actions = {
