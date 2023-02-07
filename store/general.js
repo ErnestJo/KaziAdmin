@@ -208,7 +208,164 @@ const actions = {
       .catch(() => {
         commit('GET_CATEGORY_ERROR')
       })
-  }
+  },
+
+  async _fetchdays ({ commit }) {
+    commit('GET_DAYS')
+    await this.$axios
+      .$get('/api/category')
+      .then((response) => {
+        commit('GET_DAYS_SUCCESS', response)
+      })
+      .catch(() => {
+        commit('GET_DAYS_ERROR')
+      })
+  },
+
+  async _fetchlocation ({ commit }) {
+    commit('GET_LOCATION')
+    await this.$axios
+      .$get('/api/category')
+      .then((response) => {
+        commit('GET_LOCATION_SUCCESS', response)
+      })
+      .catch(() => {
+        commit('GET_LOCATION_ERROR')
+      })
+  },
+
+  async _fetchjobname ({ commit }) {
+    commit('GET_JOBNAME')
+    await this.$axios
+      .$get('/api/category')
+      .then((response) => {
+        commit('GET_JOBNAME_SUCCESS', response)
+      })
+      .catch(() => {
+        commit('GET_JOBNAME_ERROR')
+      })
+  },
+
+  async _fetchphone ({ commit }) {
+    commit('GET_PHONE')
+    await this.$axios
+      .$get('/api/category')
+      .then((response) => {
+        commit('GET_PHONE_SUCCESS', response)
+      })
+      .catch(() => {
+        commit('GET_PHONE_ERROR')
+      })
+  },
+
+  async _fetchregion ({ commit }) {
+    commit('GET_REGION')
+    await this.$axios
+      .$get('/api/category')
+      .then((response) => {
+        commit('GET_REGION_SUCCESS', response)
+      })
+      .catch(() => {
+        commit('GET_REGION_ERROR')
+      })
+  },
+
+  async _fetchslots ({ commit }) {
+    commit('GET_SLOTS')
+    await this.$axios
+      .$get('/api/category')
+      .then((response) => {
+        commit('GET_SLOTS_SUCCESS', response)
+      })
+      .catch(() => {
+        commit('GET_SLOTS_ERROR')
+      })
+  },
+
+  async _fetchcreated ({ commit }) {
+    commit('GET_CREATED')
+    await this.$axios
+      .$get('/api/category')
+      .then((response) => {
+        commit('GET_CREATED_SUCCESS', response)
+      })
+      .catch(() => {
+        commit('GET_CREATED_ERROR')
+      })
+  },
+
+  async _fetchremoved ({ commit }) {
+    commit('GET_REMOVED')
+    await this.$axios
+      .$get('/api/category')
+      .then((response) => {
+        commit('GET_REMOVED_SUCCESS', response)
+      })
+      .catch(() => {
+        commit('GET_REMOVED_ERROR')
+      })
+  },
+
+  async _fetchupdatedAt ({ commit }) {
+    commit('GET_UPDATEDAT')
+    await this.$axios
+      .$get('/api/category')
+      .then((response) => {
+        commit('GET_UPDATEDAT_SUCCESS', response)
+      })
+      .catch(() => {
+        commit('GET_UPDATEDAT_ERROR')
+      })
+  },
+
+  async _fetchuudi ({ commit }) {
+    commit('GET_UUDI')
+    await this.$axios
+      .$get('/api/category')
+      .then((response) => {
+        commit('GET_UUDI_SUCCESS', response)
+      })
+      .catch(() => {
+        commit('GET_UUDI_ERROR')
+      })
+  },
+
+  async _fetchuudi ({ commit }) {
+    commit('GET_UUDI')
+    await this.$axios
+      .$get('/api/category')
+      .then((response) => {
+        commit('GET_UUDI_SUCCESS', response)
+      })
+      .catch(() => {
+        commit('GET_UUDI_ERROR')
+      })
+  },
+
+  async _fetchname ({ commit }) {
+    commit('GET_NAME')
+    await this.$axios
+      .$get('/api/category')
+      .then((response) => {
+        commit('GET_NAME_SUCCESS', response)
+      })
+      .catch(() => {
+        commit('GET_NAME_ERROR')
+      })
+  },
+
+  async _fetchchannel ({ commit }) {
+    commit('GET_CHANNEL')
+    await this.$axios
+      .$get('/api/category')
+      .then((response) => {
+        commit('GET_CHANNEL_SUCCESS', response)
+      })
+      .catch(() => {
+        commit('GET_CHANNEL_ERROR')
+      })
+  },
+
 }
 
 const getters = {
