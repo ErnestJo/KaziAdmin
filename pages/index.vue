@@ -16,21 +16,20 @@
           <v-col
             lg="6"
             cols="12"
-            v-for="(item, index) in activityLog"
+            v-for="(item, index) in general"
             :key="index"
           >
             <v-card elevation="2" class="rounded-lg">
               <v-card-text class="d-flex justify-space-between align-center">
                 <div>
-                  <strong>{{ item.title }}</strong> <br />
+                  <strong>{{ item.category }}</strong> <br />
                   <span>Last 3 weeks</span>
                 </div>
                 <v-avatar
                   size="60"
-                  :color="item.color"
                   style="border: 3px solid #444"
                 >
-                  <span style="color: white">{{ item.amount }} +</span>
+                  <span style="color: white">{{ item.total }} +</span>
                 </v-avatar>
               </v-card-text>
               <v-card-actions class="d-flex justify-space-between">
@@ -41,13 +40,12 @@
       </v-col>
       <v-col cols="12" lg="5">
         <v-card>
-          <v-card-title>Activities</v-card-title>
+          <v-card-title>Category Job Counts</v-card-title>
           <v-card-text class="py-0">
             <v-timeline align-top dense>
               <v-timeline-item color="indigo" small>
-                <strong>5 Minuts ago</strong>
+                <strong></strong>
                 <div class="text-caption">
-                  You have new order please check this out
                 </div>
               </v-timeline-item>
               <v-timeline-item color="green" small>
@@ -74,9 +72,9 @@
             :items-per-page="5"
             class="elevation-1"
           >
-            <template v-slot:item.action="">
+            <!-- <template v-slot:item.action="">
               <v-btn color="success" outlined small shaped>View</v-btn>
-            </template>
+            </template> -->
           </v-data-table>
         </v-card>
       </v-col>
@@ -85,6 +83,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: "Dashboard",
   data() {
@@ -135,7 +134,7 @@ export default {
           fat: "yes",
           carbs:  "Dar es salaam",
           protein: 3,
-         
+
         },
         {
           name: "Kupika Pilau",
@@ -143,7 +142,7 @@ export default {
           fat: "no",
           carbs:  "Dar es salaam",
           protein:3,
-        
+
         },
         {
           name: "Kufua nguo",
@@ -151,7 +150,7 @@ export default {
           fat: "no",
           carbs: "Dar es salaam",
           protein: 2,
-          
+
         },
         {
           name: "Usafi",
@@ -159,7 +158,7 @@ export default {
           fat: "yes",
           carbs:  "Dar es salaam",
           protein:6,
-         
+
         },
         {
           name: "Gingerbread",
@@ -176,6 +175,15 @@ export default {
       console.log("click on " + item.no);
     },
   },
+
+  computed: {
+    ...mapGetters({ general: 'general' }),
+  },
+  created () {
+    this.$store.dispatch('_fetchcategory'),
+    console.log(this.general)
+  },
+
 };
 </script>
 
