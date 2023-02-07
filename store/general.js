@@ -309,24 +309,12 @@ const actions = {
   async _fetchupdatedAt ({ commit }) {
     commit('GET_UPDATEDAT')
     await this.$axios
-      .$get('/api/category')
+      .$get('/api/updatedAt')
       .then((response) => {
         commit('GET_UPDATEDAT_SUCCESS', response)
       })
       .catch(() => {
         commit('GET_UPDATEDAT_ERROR')
-      })
-  },
-
-  async _fetchuudi ({ commit }) {
-    commit('GET_UUDI')
-    await this.$axios
-      .$get('/api/category')
-      .then((response) => {
-        commit('GET_UUDI_SUCCESS', response)
-      })
-      .catch(() => {
-        commit('GET_UUDI_ERROR')
       })
   },
 
