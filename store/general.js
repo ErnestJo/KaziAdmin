@@ -359,7 +359,63 @@ const actions = {
 const getters = {
   category: (state) => {
     return state.category
-  }
+  },
+
+  days: (state) => {
+    return state.days
+  },
+
+  location: (state) => {
+    return state.location
+  },
+
+  jobName: (state) => {
+    return state.jobName
+  },
+
+
+  phone: (state) => {
+    return state.phone
+  },
+
+  region: (state) => {
+    return state.region
+  },
+
+  slots: (state) => {
+    return state.slots
+  },
+
+  removed: (state) => {
+    return state.removed
+  },
+
+  created: (state) => {
+    return state.created
+  },
+
+
+  updatedAt: (state) => {
+    return state.updatedAt
+  },
+
+
+  updatedAt: (state) => {
+    return state.updatedAt
+  },
+
+  name: (state) => {
+    return state.name
+  },
+
+  uudi: (state) => {
+    return state.uudi
+  },
+
+  channel: (state) => {
+    return state.channel
+  },
+
 }
 
 export default {
