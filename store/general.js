@@ -125,6 +125,62 @@ const mutations = {
      state.showLoader = false
      state.removed = payload.removed == null ? [] : payload.removed
    },
+
+   'GET_CREATED'(state) {
+    state.showLoader = true
+   },
+   'GET_CREATED_FAILED'(){
+     state.showLoader = false
+   },
+   'GET_CREATED_ERROR' (state) {
+     state.showLoader = false
+   },
+   'GET_CREATED_SUCCESS' (state, payload) {
+     state.showLoader = false
+     state.created = payload.created == null ? [] : payload.created
+   },
+
+   'GET_UPDATEDAT'(state) {
+    state.showLoader = true
+   },
+   'GET_UPDATEDAT_FAILED'(){
+     state.showLoader = false
+   },
+   'GET_UPDATEDAT_ERROR' (state) {
+     state.showLoader = false
+   },
+   'GET_UPDATEDAT_SUCCESS' (state, payload) {
+     state.showLoader = false
+     state.updatedAt = payload.updatedAt == null ? [] : payload.updatedAt
+   },
+
+   'GET_UUID'(state) {
+    state.showLoader = true
+   },
+   'GET_UUID_FAILED'(){
+     state.showLoader = false
+   },
+   'GET_UUID_ERROR' (state) {
+     state.showLoader = false
+   },
+   'GET_UUID_SUCCESS' (state, payload) {
+     state.showLoader = false
+     state.uudi = payload.uudi == null ? [] : payload.uudi
+   },
+
+   'GET_NAME'(state) {
+    state.showLoader = true
+   },
+   'GET_NAME_FAILED'(){
+     state.showLoader = false
+   },
+   'GET_NAME_ERROR' (state) {
+     state.showLoader = false
+   },
+   'GET_NAME_SUCCESS' (state, payload) {
+     state.showLoader = false
+     state.name = payload.name == null ? [] : payload.name
+   },
 }
 
 const actions = {
